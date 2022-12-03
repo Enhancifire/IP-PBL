@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8050:8050"
+
+  db:
+    image: redis
+    restart: always
+    
